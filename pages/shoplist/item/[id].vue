@@ -1,31 +1,28 @@
 <template>
 
-
+  <h2 v-if="itemsStore.loading" class="text-center font-bold">Loading...</h2>
   <div
+      v-else
       class="  grid grid-rows-3 lg:grid-rows-none lg:grid-cols-3 justify-between p-10  gap-8 h-1/3 gap-4 bg-white ">
     <div class=" row-span-1 lg:col-span-1 h-50   flex justify-center items-center ">
       <img alt="item"
            class="h-96 rounded-t-md"
-           src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"/>
+           :src="itemsStore?.item?.image"/>
     </div>
     <div class="flex flex-col gap-8 justify-between row-span-2 lg:col-span-2">
 
 
-      <Heading subtitle=" men's clothing"
-               title="Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"/>
+      <Heading
+          :title="itemsStore.item?.title"/>
 
       <div class="flex flex-col gap-4">
         <h2 class="font-bold text-gray-500 ">Description</h2>
-        <p class="font-semibold text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium
-          aliquam, autem
-          cum deleniti
-          exercitationem fugiat fugit impedit in incidunt itaque molestiae numquam provident quam quis suscipit
-          voluptatem voluptatibus, voluptatum.</p>
+        <p class="font-semibold text-gray-500">{{ itemsStore.item?.description }}</p>
       </div>
 
       <div class="flex gap-8">
-        <ListCard title="Item Rating" total="3.6"/>
-        <ListCard isMoney="true" title="Avg. Price" total="500"/>
+        <ListCard title="Item Rating" :total="itemsStore.item?.rating.rate"/>
+        <ListCard isMoney="true" title="Avg. Price" :total="itemsStore?.item?.price"/>
       </div>
       <div class="w-full lg:w-2/6 flex flex-col justify-end">
         <IconButton icon="plus" name="Add to shoplist" @onButtonClick="onAddClick"/>
@@ -35,7 +32,18 @@
 
   </div>
 
-  <div>
+  <div class="flex flex-col gap-8 ">
+    <div class="flex justify-start ">
+      <h3 class="text-gray-600 text-xl font-bold capitalize">Items in {{ itemsStore.item?.category }} Category</h3>
+    </div>
+    <ItemsLayout>
+      <h2 v-if="itemsStore.loading" class="text-center font-bold">Loading...</h2>
+      <div v-for="item in itemsStore.categoryItems" v-else>
+        <!--          <h1>{{ item.images[0] }}}</h1>-->
+        <ItemCard :image="item.image" :price="item?.price" :title="item?.title" icon="plus" :id="item?.id"/>
+
+      </div>
+    </ItemsLayout>
 
   </div>
   <Teleport to="body">
@@ -65,15 +73,21 @@
 
 
 import {useItemsStore} from "~/store/ItemsStore";
+import ItemsLayout from "~/layouts/ItemsLayout.vue";
+import {Item} from "~/types/Shoplist";
 
 const {id} = useRoute().params
 
 const showModal = ref(false)
 console.log('id', id)
 const itemsStore = useItemsStore()
-
 itemsStore.getSingleItem(id)
+
+itemsStore.getAllItems()
+
+
 const item = itemsStore.item
+
 const onAddClick = () => {
 
   showModal.value = !showModal.value

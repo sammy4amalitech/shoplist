@@ -20,7 +20,6 @@ const getItems = async () => {
 const getSingleItem = async (id: string | string[]) => {
   try {
     const response = await axios.get(`${BASE_URL}/products/` + id);
-    console.log("single item", response.data);
     return response.data;
   } catch (error: any) {
     if (axios.isAxiosError(error)) {

@@ -1,12 +1,12 @@
-import { NavButtonProps } from "~/types/ComponentsProps";
-
 interface Item {
   id: number;
   title: string;
   price: number;
   description?: string;
-  category?: Category;
+  category?: string;
   image: string;
+
+  rating: object;
 }
 
 interface Category {

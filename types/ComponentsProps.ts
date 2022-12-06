@@ -51,7 +51,7 @@ interface HeadingProps {
 }
 
 interface ListCardProps {
-  title: string;
+  title: string | number;
   total: string;
   isMoney?: boolean;
 }

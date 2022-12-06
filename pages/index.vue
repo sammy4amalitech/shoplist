@@ -16,6 +16,7 @@
       Loading...
     </h2>
     <div v-for="item in itemsStore.filteredItems" v-else>
+     
       <ItemCard
           :id="item?.id"
           :image="item?.image"

@@ -21,14 +21,21 @@ interface State {
   searchInput: string;
 
   shoplists: Shoplist[];
-  item: object | undefined;
+  item: Item | undefined;
   persist: object;
 }
 
 export const useItemsStore = defineStore("items", {
   state: (): State => ({
     items: [],
-    item: undefined,
+    item: {
+      id: 0,
+      title: "",
+      price: 0,
+      category: "",
+      image: "",
+      rating: {},
+    },
     loading: false,
     searchInput: "",
     shoplists: shoplistsArr,
@@ -43,6 +50,11 @@ export const useItemsStore = defineStore("items", {
     filteredItems: (state) => {
       return state.items.filter((item) =>
         item.title.includes(state.searchInput)
+      );
+    },
+    categoryItems: (state) => {
+      return state.items.filter(
+        (item) => item.category === state?.item?.category
       );
     },
   },
