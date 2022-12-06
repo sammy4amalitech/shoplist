@@ -2,12 +2,12 @@
 
 
   <div
-      @input="useSearchInput"
-      class=" relative  text-gray-600 focus-within:text-gray-400 border border-gray-200 focus:border-green-400 border-2 rounded-md">
+      class=" relative  text-gray-600 focus-within:text-gray-400 border border-gray-200 focus:border-green-400 border-2 rounded-md"
+      @input="useSearchInput">
               <span class="absolute inset-y-0 left-0 flex itemsStore-center pl-2 mt-2">
                 <MagnifyingGlassIcon class="h-5 w-5 text-gray-400 "/>
               </span>
-    <BasicInput name="search" placeholder="Search..." type="text" customStyle="pl-10" v-model="searchInput"/>
+    <BasicInput v-model="searchInput" customStyle="pl-10" name="search" placeholder="Search..." type="text"/>
 
   </div>
 

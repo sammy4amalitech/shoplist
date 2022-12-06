@@ -4,10 +4,10 @@
   <Hero/>
 
   <SearchInput
-      name="search"
-      type="text"
-      placeholder="Search..."
       icon="magnifying-glass"
+      name="search"
+      placeholder="Search..."
+      type="text"
       @onUseSearchInput="()=>console.log('input yh')"
   />
 
@@ -15,12 +15,12 @@
     <h2 v-if="itemsStore.loading" class="text-center font-bold">
       Loading...
     </h2>
-    <div v-else v-for="item in itemsStore.filteredItems">
+    <div v-for="item in itemsStore.filteredItems" v-else>
       <ItemCard
-          :title="item?.title"
+          :id="item?.id"
           :image="item?.image"
           :price="item?.price"
-          :id="item?.id"
+          :title="item?.title"
           icon="plus"
       />
     </div>
@@ -29,15 +29,8 @@
 </template>
 
 <script lang="ts" setup>
-import {nextTick, onBeforeMount, onMounted} from "vue";
-import ImageCard from "../components/ItemCard.vue";
-import {useCounterStore} from "~/store/counter";
 import {useItemsStore} from "~/store/ItemsStore";
-import {Item} from "~/types/Shoplist";
-import {ItemCardProps} from "~/types/ComponentsProps";
-import {getItems} from "~/services/ItemsServices";
 import ItemsLayout from "~/layouts/ItemsLayout.vue";
-import login from "~/pages/account/login.vue";
 
 const itemsStore = useItemsStore();
 

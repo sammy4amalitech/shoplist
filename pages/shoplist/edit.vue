@@ -1,5 +1,5 @@
 <template>
-<h1>Shoplist - Edit </h1>
+  <h1>Shoplist - Edit </h1>
 </template>
 
 <script lang="ts">

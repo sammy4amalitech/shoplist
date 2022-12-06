@@ -1,5 +1,4 @@
-import axios, { AxiosError, AxiosPromise, AxiosResponse } from "axios";
-import { Item } from "~/types/Shoplist";
+import axios from "axios";
 
 const BASE_URL = "https://fakestoreapi.com";
 

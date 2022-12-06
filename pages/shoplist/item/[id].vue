@@ -5,14 +5,14 @@
       class="  grid grid-rows-3 lg:grid-rows-none lg:grid-cols-3 justify-between p-10  gap-8 h-1/3 gap-4 bg-white ">
     <div class=" row-span-1 lg:col-span-1 h-50   flex justify-center items-center ">
       <img alt="item"
-           src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-           class="h-96 rounded-t-md"/>
+           class="h-96 rounded-t-md"
+           src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"/>
     </div>
     <div class="flex flex-col gap-8 justify-between row-span-2 lg:col-span-2">
 
 
-      <Heading title="Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"
-               subtitle=" men's clothing"/>
+      <Heading subtitle=" men's clothing"
+               title="Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"/>
 
       <div class="flex flex-col gap-4">
         <h2 class="font-bold text-gray-500 ">Description</h2>
@@ -25,10 +25,10 @@
 
       <div class="flex gap-8">
         <ListCard title="Item Rating" total="3.6"/>
-        <ListCard title="Avg. Price" total="500" isMoney="true"/>
+        <ListCard isMoney="true" title="Avg. Price" total="500"/>
       </div>
       <div class="w-full lg:w-2/6 flex flex-col justify-end">
-        <IconButton @onButtonClick="onAddClick" name="Add to shoplist" icon="plus"/>
+        <IconButton icon="plus" name="Add to shoplist" @onButtonClick="onAddClick"/>
       </div>
 
     </div>

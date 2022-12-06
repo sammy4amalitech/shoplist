@@ -5,19 +5,19 @@
 
   <div class="flex gap-8">
     <ListCard title="NO. ITEMS ON LIST" total="100"/>
-    <ListCard title="TOTAL AMOUNT OF LIST ITEMS" total="2347" isMoney="true"/>
-    <ListCard title="AVERAGE PRICE" total="500" isMoney="true"/>
+    <ListCard isMoney="true" title="TOTAL AMOUNT OF LIST ITEMS" total="2347"/>
+    <ListCard isMoney="true" title="AVERAGE PRICE" total="500"/>
   </div>
 
   <ItemsLayout>
     <h2 v-if="itemsStore.loading" class="text-center font-bold">
       Loading...
     </h2>
-    <div v-else v-for="item in itemsStore.allItems">
+    <div v-for="item in itemsStore.allItems" v-else>
       <ItemCard
-          :title="item?.title"
           :image="item?.image"
           :price="item?.price"
+          :title="item?.title"
           icon="check"
       />
     </div>

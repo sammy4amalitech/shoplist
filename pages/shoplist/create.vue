@@ -1,24 +1,26 @@
 <template>
 
-  <Heading title="Create a new Shoplist"
-           subtitle="Create a custom shoplist to help you organize your shopping items"/>
+  <Heading subtitle="Create a custom shoplist to help you organize your shopping items"
+           title="Create a new Shoplist"/>
   <form action="" class="flex flex-col gap-8">
     <div class="flex flex-col gap-2">
-      <label for="name" class="font-semibold">Name</label>
-      <BasicInput v-model="name" name="name" type="text" placeholder="eg: Monday shopping "
-                  customStyle="border-gray-200 border-2 p-4"/>
+      <label class="font-semibold" for="name">Name</label>
+      <BasicInput v-model="name" customStyle="border-gray-200 border-2 p-4" name="name"
+                  placeholder="eg: Monday shopping "
+                  type="text"/>
     </div>
     <div class="flex flex-col gap-2">
-      <label for="name" class="font-semibold">Description</label>
-      <textarea v-model="description" name="name" type="text" placeholder="eg: Shipping to be done on Monday... "
+      <label class="font-semibold" for="name">Description</label>
+      <textarea v-model="description" class="border-gray-200 border-2 p-4 rounded-md" name="name"
+                placeholder="eg: Shipping to be done on Monday... "
                 rows="10"
-                class="border-gray-200 border-2 p-4 rounded-md"/>
+                type="text"/>
 
     </div>
 
     <div class=" flex justify-center items-center w-full lg:w-1/3 lg:justify-start">
-      <IconButton @onButtonClick="createList" name="Create shoplist" type="submit" customStyle=" px-10 text-base "
-                  icon="plus"/>
+      <IconButton customStyle=" px-10 text-base " icon="plus" name="Create shoplist" type="submit"
+                  @onButtonClick="createList"/>
     </div>
 
   </form>

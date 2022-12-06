@@ -5,8 +5,8 @@
        class=" items-end rounded-md justify-end p-4 bg-white h-full shadow-md grid grid-rows-2 gap-8">
     <NuxtLink :to="`/shoplist/item/${'1'}`">
       <div class="h-52 row-span-1 flex justify-center items-center ">
-        <img alt="item"
-             :src="props.image"
+        <img :src="props.image"
+             alt="item"
              class="h-full rounded-t-md"/>
       </div>
     </NuxtLink>
@@ -22,7 +22,7 @@
 
         </div>
         <div class=" flex flex-col mt-3.5  ">
-          <IconButton @onButtonClick="onAddClick" :icon="props.icon"/>
+          <IconButton :icon="props.icon" @onButtonClick="onAddClick"/>
 
 
           <!--          <IconButton @onButtonClick="onAddClick" name="" :icon="props.icon"/>-->
@@ -61,11 +61,8 @@
 <script lang="ts" setup>
 
 
-import {Item} from "~/types/Shoplist";
 import {ItemCardProps} from "~/types/ComponentsProps";
-import ListNavs from "~/components/ShopLists.vue";
 import {useItemsStore} from "~/store/ItemsStore";
-import IconButon from "~/components/IconButton.vue";
 
 const itemsStore = useItemsStore()
 

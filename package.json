@@ -20,13 +20,11 @@
     "vite-plugin-vue-type-imports": "^0.2.4"
   },
   "dependencies": {
-    "@heroicons/vue": "^2.0.13",
     "@nuxt/typescript-runtime": "^2.1.0",
     "@pinia/nuxt": "^0.4.6",
     "axios": "^1.2.0",
     "nuxt-icons": "^3.0.0",
     "pinia-plugin-persist": "^1.0.0",
-    "pinia-plugin-persistedstate": "^3.0.1",
-    "search-array": "^1.6.0"
+    "pinia-plugin-persistedstate": "^3.0.1"
   }
 }

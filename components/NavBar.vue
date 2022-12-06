@@ -9,10 +9,10 @@
         </NuxtLink>
 
         <div class="md:hidden" @click="useToggleMenu">
-          <nuxt-icon name="x-mark" v-if="toggleMenu"
-                     class="text-4xl extrabold"/>
-          <nuxt-icon name="menu" v-else
-                     class="text-4xl extrabold"/>
+          <nuxt-icon v-if="toggleMenu" class="text-4xl extrabold"
+                     name="x-mark"/>
+          <nuxt-icon v-else class="text-4xl extrabold"
+                     name="menu"/>
         </div>
 
 
@@ -25,8 +25,6 @@
   </nav>
 </template>
 <script lang="ts" setup>
-
-import {EmitsOptions} from "@vue/runtime-core";
 
 const emits = defineEmits(['onToggleMenu']);
 

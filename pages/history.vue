@@ -5,9 +5,9 @@
   </div>
   <ItemsLayout>
     <h2 v-if="itemsStore.loading" class="text-center font-bold">Loading...</h2>
-    <div v-else v-for="item in itemsStore.allItems">
+    <div v-for="item in itemsStore.allItems" v-else>
       <!--          <h1>{{ item.images[0] }}}</h1>-->
-      <ItemCard :title="item?.title" :image="item.image" :price="item?.price" icon="plus"/>
+      <ItemCard :image="item.image" :price="item?.price" :title="item?.title" icon="plus"/>
 
     </div>
   </ItemsLayout>

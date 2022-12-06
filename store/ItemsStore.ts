@@ -1,11 +1,6 @@
 import { defineStore } from "pinia";
 import { Item, Shoplist } from "~/types/Shoplist";
 import { getItems, getSingleItem } from "~/services/ItemsServices";
-import axios, { AxiosResponse } from "axios";
-import { loading } from "@nuxt/ui-templates";
-import JsonSearch from "search-array";
-import { NavButtonProps } from "~/types/ComponentsProps";
-import { StorageLike } from "pinia-plugin-persistedstate";
 
 const arr: Item[] = [
   {
