@@ -41,8 +41,11 @@ const itemsStore = useItemsStore()
 
 
 const createList = () => {
-  console.log('createlist clicked')
-  itemsStore.createList({name: name.value, description: description.value} as Shoplist)
+  itemsStore.createList({
+    name: name.value,
+    description: description.value,
+    id: itemsStore.shoplists.length + 1
+  } as Shoplist)
 }
 
 

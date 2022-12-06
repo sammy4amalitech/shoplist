@@ -4,12 +4,12 @@ import { getItems, getSingleItem } from "~/services/ItemsServices";
 
 const shoplistsArr: Shoplist[] = [
   {
-    id: 20,
+    id: 1,
     name: "Tuesday Shopping ",
     icon: "shopping-bag",
   },
   {
-    id: 30,
+    id: 2,
     name: "Wednesday Shopping ",
     icon: "shopping-bag",
   },
@@ -70,7 +70,6 @@ export const useItemsStore = defineStore("items", {
     async createList(list: Shoplist) {
       this.loading = true;
 
-      console.log("shoplist created", list);
       try {
         list && this.shoplists.push(list);
       } catch (e) {
@@ -78,8 +77,6 @@ export const useItemsStore = defineStore("items", {
       }
 
       this.loading = false;
-
-      console.log("get localStorage", await localStorage.getItem("list"));
     },
   },
 });

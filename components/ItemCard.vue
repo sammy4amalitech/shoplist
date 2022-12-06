@@ -50,7 +50,7 @@
       <template #body>
 
         <ul v-for="item in itemsStore.shoplists" class="flex flex-col my-2">
-          <NavButton :icon="item.icon" :name="item.name" customStyle="text-base"/>
+          <NavButton icon="shopping-bag" :name="item.name" customStyle="text-base"/>
         </ul>
 
       </template>
