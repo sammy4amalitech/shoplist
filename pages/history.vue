@@ -7,7 +7,7 @@
     <h2 v-if="itemsStore.loading" class="text-center font-bold">Loading...</h2>
     <div v-for="item in itemsStore.allItems" v-else>
       <!--          <h1>{{ item.images[0] }}}</h1>-->
-      <ItemCard :image="item.image" :price="item?.price" :title="item?.title" icon="plus"/>
+      <ItemCard :image="item.image" :price="item?.price" :title="item?.title" icon="plus" :id="item?.id"/>
 
     </div>
   </ItemsLayout>
@@ -21,11 +21,6 @@ import UnderlinedButton from "~/components/UnderlinedButton.vue";
 
 
 const itemsStore = useItemsStore()
-
-const items = itemsStore.allItems
-
-
-console.log("axios res", itemsStore.getAllItems())
 
 
 itemsStore.getAllItems()

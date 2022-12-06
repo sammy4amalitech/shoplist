@@ -3,7 +3,7 @@
 
   <div :id="`${props.id}`"
        class=" items-end rounded-md justify-end p-4 bg-white h-full shadow-md grid grid-rows-2 gap-8">
-    <NuxtLink :to="`/shoplist/item/${'1'}`">
+    <NuxtLink :to="`/shoplist/item/${props.id}`">
       <div class="h-52 row-span-1 flex justify-center items-center ">
         <img :src="props.image"
              alt="item"

@@ -18,6 +18,7 @@
           :image="item?.image"
           :price="item?.price"
           :title="item?.title"
+          :id="item?.id"
           icon="check"
       />
     </div>
