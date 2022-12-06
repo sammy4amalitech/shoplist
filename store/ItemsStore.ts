@@ -2,30 +2,6 @@ import { defineStore } from "pinia";
 import { Item, Shoplist } from "~/types/Shoplist";
 import { getItems, getSingleItem } from "~/services/ItemsServices";
 
-const arr: Item[] = [
-  {
-    id: 1,
-    title: "Biscuit",
-    price: 70,
-    image:
-      "https://animeshka.org/uploads/posts/2022-02/1645081309_62-animeshka-org-p-altai-and-sayan-mountains-priroda-foto-69.jpg",
-  },
-  {
-    id: 1,
-    title: "Milk",
-    price: 100,
-    image:
-      "https://animeshka.org/uploads/posts/2022-02/1645081309_62-animeshka-org-p-altai-and-sayan-mountains-priroda-foto-69.jpg",
-  },
-  {
-    id: 1,
-    title: "Coke",
-    price: 10,
-    image:
-      "https://animeshka.org/uploads/posts/2022-02/1645081309_62-animeshka-org-p-altai-and-sayan-mountains-priroda-foto-69.jpg",
-  },
-];
-
 const shoplistsArr: Shoplist[] = [
   {
     id: 20,
