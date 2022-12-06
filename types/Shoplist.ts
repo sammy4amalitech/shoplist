@@ -5,14 +5,7 @@ interface Item {
   description?: string;
   category?: string;
   image: string;
-
   rating: object;
-}
-
-interface Category {
-  id: number;
-  name: string;
-  image: string;
 }
 
 interface Shoplist {
