@@ -1,13 +1,39 @@
 <template>
 
 
+  <!--  <div :id="`${props.id}`" class=" p-2 h-[30rem] flex flex-col  justify-between bg-white p-4 rounded-md">-->
+  <!--    <div class="h-60 w-6-">-->
+  <!--      <img-->
+  <!--          :src="props.image"-->
+  <!--          alt=""-->
+  <!--          class="h-full rounded-md bg-c"-->
+  <!--      >-->
+  <!--    </div>-->
+  <!--    <div class="h-[8rem]">-->
+  <!--      <div>-->
+  <!--        <p>{{ props.title }}</p>-->
+
+  <!--      </div>-->
+  <!--      <div class="flex justify-between">-->
+  <!--        <div>-->
+  <!--          <p class="">₵ 109.95</p>-->
+  <!--          <p>Avg. Price</p>-->
+
+  <!--        </div>-->
+  <!--        <IconButton icon="plus"/>-->
+  <!--      </div>-->
+  <!--    </div>-->
+
+  <!--  </div>-->
+
+
   <div :id="`${props.id}`"
-       class=" items-end rounded-md justify-end p-4 bg-white h-full shadow-md grid grid-rows-2 gap-8">
-    <NuxtLink :to="`/shoplist/item/${props.id}`">
-      <div class="h-52 row-span-1 flex justify-center items-center ">
+       class="  items-end rounded-md justify-end p-4 bg-white  shadow-md grid grid-rows-2 gap-0 m-auto ">
+    <NuxtLink :to="`/shoplist/item/${props.id}`" class=" p-4 h-full ">
+      <div class=" h-60 row-span-1 flex   justify-center items-center ">
         <img :src="props.image"
              alt="item"
-             class="h-full rounded-t-md"/>
+             class=" h-full  "/>
       </div>
     </NuxtLink>
     <div class=" row-span-1 bg-red flex flex-col justify-between gap-4">
