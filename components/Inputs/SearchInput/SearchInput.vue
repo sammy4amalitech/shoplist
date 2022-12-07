@@ -15,7 +15,7 @@
 </template>
 <script lang="ts" setup>
 import {IconInputProps} from "~/types/ComponentsProps";
-import BasicInput from "~/components/BasicInput.vue";
+import BasicInput from "~/components/Inputs/BasicInput/BasicInput.vue";
 import {useItemsStore} from "~/store/ItemsStore";
 
 const {name, icon, type,} = defineProps<IconInputProps>()

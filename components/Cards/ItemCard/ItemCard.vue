@@ -28,20 +28,20 @@
 
 
   <div :id="`${props.id}`"
-       class="  items-end rounded-md justify-end p-4 bg-white  shadow-md grid grid-rows-2 gap-0 m-auto ">
-    <NuxtLink :to="`/shoplist/item/${props.id}`" class=" p-4 h-full ">
+       class="  items-end rounded-md justify-center  p-4 bg-white  shadow-md grid grid-rows-2  ">
+    <NuxtLink :to="`/shoplist/item/${props.id}`" class="  h-full ">
       <div class=" h-60 row-span-1 flex   justify-center items-center ">
         <img :src="props.image"
              alt="item"
              class=" h-full  "/>
       </div>
     </NuxtLink>
-    <div class=" row-span-1 bg-red flex flex-col justify-between gap-4">
+    <div class=" w-full row-span-1 bg-red flex flex-col justify-between gap-4">
       <div class=" font-bold ">
         {{ props.title }}
       </div>
       <div class="flex justify-between items-center">
-        <div class="flex flex-col  justify-between align-middle items-center  ">
+        <div class="flex flex-col  justify-between  items-center  ">
           <div class="font-bold"><span>&#8373</span> {{ props.price }}</div>
 
           <div class="text-xs font-bold text-gray-500">Avg. Price</div>

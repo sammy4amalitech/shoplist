@@ -29,7 +29,7 @@
 
 <script lang="ts" setup>
 
-import ListCard from "~/components/ListCard.vue";
+import ListCard from "~/components/Cards/ListCard/ListCard.vue";
 import ItemsLayout from "~/layouts/ItemsLayout.vue";
 import {useItemsStore} from "~/store/ItemsStore";
 

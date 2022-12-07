@@ -48,6 +48,7 @@
 <script lang="ts" setup>
 
 import {ref} from "#imports";
+import IconButton from "~/components/Buttons/IconButton/IconButton.vue";
 
 const username = ref<string>("John Doe")
 const password = ref<string>("123456789")

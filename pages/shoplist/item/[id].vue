@@ -75,6 +75,9 @@
 import {useItemsStore} from "~/store/ItemsStore";
 import ItemsLayout from "~/layouts/ItemsLayout.vue";
 import {Item} from "~/types/Shoplist";
+import ItemCard from "~/components/Cards/ItemCard/ItemCard.vue";
+import IconButton from "~/components/Buttons/IconButton/IconButton.vue";
+import ListCard from "~/components/Cards/ListCard/ListCard.vue";
 
 const {id} = useRoute().params
 

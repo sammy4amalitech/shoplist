@@ -13,7 +13,6 @@
 </template>
 
 <script lang="ts" setup>
-
 import {IconButtonProps} from "~/types/ComponentsProps";
 
 const {name, icon, customStyle, route} = defineProps<IconButtonProps>()

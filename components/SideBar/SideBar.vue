@@ -38,8 +38,11 @@
 <script lang="ts" setup>
 
 import {ref} from "#imports";
-import NavBar from "~/components/NavBar.vue";
+import NavBar from "~/components/NavBar/NavBar.vue";
 import {useItemsStore} from "~/store/ItemsStore";
+import NavButton from "~/components/Buttons/NavButton/NavButton.vue";
+import IconButton from "~/components/Buttons/IconButton/IconButton.vue";
+import SearchInput from "~/components/Inputs/SearchInput/SearchInput.vue";
 
 
 const itemsStore = useItemsStore()
