@@ -1,0 +1,4 @@
+export function setupVue3({}) {
+  // app.provide('test', 'hello')
+  // app.use(...)
+}
