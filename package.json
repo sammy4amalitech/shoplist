@@ -1,6 +1,9 @@
 {
   "private": true,
   "scripts": {
+    "story:dev": "histoire dev",
+    "story:build": "histoire build",
+    "story:preview": "histoire preview",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
@@ -8,10 +11,12 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@histoire/plugin-nuxt": "^0.11.9",
+    "@histoire/plugin-vue": "^0.11.0",
     "@nuxt/image": "^0.7.1",
     "@nuxt/image-edge": "^1.0.0-27821548.ab054e4",
-    "@pinia-plugin-persistedstate/nuxt": "^1.0.0",
     "autoprefixer": "^10.4.13",
+    "histoire": "^0.11.9",
     "nuxt": "3.0.0",
     "postcss": "^8.4.19",
     "prettier": "^2.8.0",
@@ -23,8 +28,6 @@
     "@nuxt/typescript-runtime": "^2.1.0",
     "@pinia/nuxt": "^0.4.6",
     "axios": "^1.2.0",
-    "nuxt-icons": "^3.0.0",
-    "pinia-plugin-persist": "^1.0.0",
-    "pinia-plugin-persistedstate": "^3.0.1"
+    "nuxt-icons": "^3.0.0"
   }
 }

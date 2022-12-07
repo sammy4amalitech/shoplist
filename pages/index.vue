@@ -16,7 +16,7 @@
       Loading...
     </h2>
     <div v-for="item in itemsStore.filteredItems" v-else>
-     
+
       <ItemCard
           :id="item?.id"
           :image="item?.image"
@@ -32,6 +32,7 @@
 <script lang="ts" setup>
 import {useItemsStore} from "~/store/ItemsStore";
 import ItemsLayout from "~/layouts/ItemsLayout.vue";
+import ItemCard from "~/components/Cards/ItemCard/ItemCard.vue";
 
 const itemsStore = useItemsStore();
 

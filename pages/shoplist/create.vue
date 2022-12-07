@@ -28,11 +28,12 @@
 </template>
 
 <script lang="ts" setup>
-import BasicInput from "~/components/BasicInput.vue";
-import Heading from "~/components/Heading.vue";
+import BasicInput from "~/components/Inputs/BasicInput/BasicInput.vue";
+import Heading from "~/components/Heading/Heading.vue";
 import {ref} from "#imports";
 import {useItemsStore} from "~/store/ItemsStore";
 import {Shoplist} from "~/types/Shoplist";
+import IconButton from "~/components/Buttons/IconButton/IconButton.vue";
 
 const name = ref<string>("")
 const description = ref<string>("")

@@ -17,7 +17,8 @@
 <script lang="ts" setup>
 import {useItemsStore} from "~/store/ItemsStore";
 import ItemsLayout from "~/layouts/ItemsLayout.vue";
-import UnderlinedButton from "~/components/UnderlinedButton.vue";
+import UnderlinedButton from "~/components/Buttons/UnderlinedButton/UnderlinedButton.vue";
+import ItemCard from "~/components/Cards/ItemCard/ItemCard.vue";
 
 
 const itemsStore = useItemsStore()

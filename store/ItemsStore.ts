@@ -22,7 +22,6 @@ interface State {
 
   shoplists: Shoplist[];
   item: Item | undefined;
-  persist: object;
 }
 
 export const useItemsStore = defineStore("items", {
@@ -39,9 +38,6 @@ export const useItemsStore = defineStore("items", {
     loading: false,
     searchInput: "",
     shoplists: shoplistsArr,
-    persist: {
-      storage: persistedState.localStorage,
-    },
   }),
 
   getters: {
